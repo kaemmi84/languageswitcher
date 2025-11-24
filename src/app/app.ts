@@ -8,5 +8,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('languageswitcher');
+  protected readonly title = signal('Hello World!');
+
+  setLanguageAndLocation(language: string, location: string) {
+
+    localStorage.setItem('locale', language.toLowerCase());
+    window.location.reload();
+  }
 }
